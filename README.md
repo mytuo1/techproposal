@@ -1,4 +1,4 @@
-### Technical Proposal: Agentic AI for Strategic Conference Planning (450-500 Words)
+### Technical Proposal: Agentic AI for Strategic Conference Planning
 
 The Agentic AI for Strategic Conference Planning is a robust, multi-agent system implemented in Python using LangGraph, designed for seamless integration with IBM WatsonX Orchestrate. This system comprises five specialized agents to deliver personalized, cost-effective, and strategically aligned event recommendations for Crowdstrike employees. Below, we detail the technical architecture, agent functionalities, integrations with enterprise systems (Aha!, EPM, Amplitude), and supporting diagrams.
 
@@ -43,18 +43,19 @@ Built on LangGraph, a Python framework for multi-agent workflows, the system orc
        F --> I[Box Storage]
        F --> J[Aha!/EPM/Amplitude]
    ```
-```mermaid
-graph LR
-    A[LinkedIn API] --> B[Relevancy Checker]
-    C[Crowdstrike Events] --> D[Event Crawler]
-    E[Expedia API] --> F[Travel Agent]
-    B --> G[Database]
-    D --> G
-    F --> G
-    G --> H[Observer Agent]
-    H --> I[Cost Analysis]
-    I --> J[Slack Notifications]
-    I --> K[Box Storage]
-    H --> L[Aha!/EPM/Amplitude]
-```
+2. **Data Flow Diagram**:
+   ```mermaid
+   graph LR
+       A[LinkedIn API] --> B[Relevancy Checker]
+       C[Crowdstrike Events] --> D[Event Crawler]
+       E[Expedia API] --> F[Travel Agent]
+       B --> G[Database]
+       D --> G
+       F --> G
+       G --> H[Observer Agent]
+       H --> I[Cost Analysis]
+       I --> J[Slack Notifications]
+       I --> K[Box Storage]
+       H --> L[Aha!/EPM/Amplitude]
+   ```
 
